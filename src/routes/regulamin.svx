@@ -1,0 +1,37 @@
+---
+title: Regulamin SpaceMC.EU
+
+---
+<style>
+h2::before {
+    counter-increment: rules-1;
+    content: "Art " counter(rules-1) ". ";
+}
+ol li {
+    counter-increment: paragraph;
+}
+ol li::before {
+    content: "§ " counter(paragraph) ". ";
+}
+ol {
+  list-style: none;
+  counter-reset: paragraph;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+</style>
+<svelte:head>
+    <title>{ title }</title>
+</svelte:head>
+
+# { title }
+## Something
+1. First
+2. Second
+3. Third
