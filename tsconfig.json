@@ -41,5 +41,6 @@
 		"src/**/*.ts",
 		"src/**/*.svelte"
 	],
-	"exclude": ["src/**/*.svx"]
+	"exclude": ["src/**/*.svx"],
+	"extends": "./.svelte-kit/tsconfig.json"
 }
