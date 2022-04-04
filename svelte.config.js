@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-vercel'
+import adapter from '@sveltejs/adapter-auto'
 import preprocess from 'svelte-preprocess'
 import { mdsvex } from 'mdsvex'
 import path from 'path'
@@ -26,6 +26,9 @@ const config = {
 					$assets: path.resolve('src/assets/'),
 					$store: path.resolve('src/store/'),
 				},
+			},
+			ssr: {
+				noExternal: ['@fortawesome/*'],
 			},
 		},
 	},

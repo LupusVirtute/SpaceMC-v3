@@ -3,6 +3,7 @@
 	import type { LinkProps } from '$common/types'
 	import Icon from 'fa-svelte'
 	import { faRocket } from '@fortawesome/free-solid-svg-icons/faRocket.js'
+	export const prerender = false
 
 	const items: LinkProps[] = [
 		{

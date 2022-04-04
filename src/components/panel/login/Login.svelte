@@ -4,6 +4,7 @@
 	import { FontAwesomeIcon } from 'fontawesome-svelte'
 	import { faRocket } from '@fortawesome/free-solid-svg-icons'
 	import ParticlesWrapper from '$components/decor/particles-wrapper.svelte'
+	export const prerender = false
 
 	const captchaKey = import.meta.env.VITE_CAPTCHA_KEY
 </script>
