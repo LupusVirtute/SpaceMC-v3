@@ -34,19 +34,19 @@
 	}
 </script>
 
-<header class="fixed z-[100] w-full flex justify-center bg-blue-800">
+<header class="fixed z-[100] flex w-full justify-center bg-blue-800">
 	<nav
-		class="grid md:grid-cols-[8fr,3fr] gap-y-4 px-4 items-center z-10 w-full py-4 place-items-center text-xs relative"
+		class="relative z-10 grid w-full place-items-center items-center gap-y-4 px-4 py-4 text-xs md:grid-cols-[8fr,3fr]"
 	>
 		<div
-			class="flex flex-row flex-wrap gap-6 items-center justify-center py-2 md:justify-start relative z-10"
+			class="relative z-10 flex flex-row flex-wrap items-center justify-center gap-6 py-2 md:justify-start"
 		>
 			{#each items as item}
 				<Link {item} />
 			{/each}
 		</div>
 		<div
-			class="[transform:rotate(135deg);] md:[transform:rotate(0deg);] absolute md:static bottom-[-1rem] bg-blue-600 md:bg-transparent rounded-full p-2 mouse-pointer border-r-yellow-700 border-t-yellow-700 border-t-2 border-r-2 md:border-0"
+			class="mouse-pointer absolute bottom-[-1.8rem] rounded-full border-t-2 border-r-2 border-r-yellow-700 border-t-yellow-700 bg-blue-600 p-2 [transform:rotate(135deg);] md:static md:border-0 md:bg-transparent md:[transform:rotate(0deg);]"
 			on:click={flipNavigation}
 		>
 			<Icon icon={faRocket} class="text-2xl" />

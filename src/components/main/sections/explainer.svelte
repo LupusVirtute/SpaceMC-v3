@@ -2,11 +2,11 @@
 	import Wave from '$components/decor/wave.svg.svelte'
 </script>
 
-<div class="text-blue-600 z-10 w-screen">
+<div class="z-10 w-screen text-blue-600">
 	<Wave />
-	<div class="bg-blue-600 text-xl text-white grid place-items-center">
-		<div class="container px-8 py-16 flex flex-col gap-y-4 min-h-screen">
-			<h2 class="text-4xl mb-8 text-center">O nas</h2>
+	<div class="grid place-items-center bg-blue-600 text-xl text-white">
+		<div class="container flex min-h-screen flex-col gap-y-4 px-8 py-16">
+			<h2 class="mb-8 text-center text-4xl">O nas</h2>
 
 			<p>
 				Projekt SpaceMC powstał z myślą o stworzeniu idealnego serwera
@@ -27,7 +27,7 @@
 				prowadzeniu serwerów od paru lat i więcej.
 			</p>
 
-			<h2 class="text-4xl my-8 text-center">Dlaczego my?</h2>
+			<h2 class="my-8 text-center text-4xl">Dlaczego my?</h2>
 
 			<p>
 				Jesteśmy zmotywowani do podejmowania nowych wyzwań ciekawych

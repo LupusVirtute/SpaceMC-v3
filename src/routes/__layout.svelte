@@ -12,16 +12,20 @@
 <svelte:head>
 	<title>{title}</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		rel="preconnect"
+		href="https://fonts.gstatic.com"
+		crossorigin="true"
+	/>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
 		rel="stylesheet"
 	/>
 </svelte:head>
 
-<main class="relative min-w-screen min-h-screen bg-black">
+<main class="relative min-h-screen bg-black">
 	<Navbar />
-	<div class="pt-44 xs:pt-24">
+	<div class="min-h-screen pt-44 xs:pt-24">
 		<slot />
 	</div>
 </main>

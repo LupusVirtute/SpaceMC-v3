@@ -15,7 +15,7 @@ module.exports = {
 				playfair: 'Playfair Display, serif',
 			},
 			screens: {
-				xs: '482px',
+				xs: '520px',
 			},
 		},
 	},

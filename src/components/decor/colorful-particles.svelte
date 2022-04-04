@@ -1,11 +1,20 @@
 <script lang="ts">
-	import Particles from 'svelte-particles'
+	import { onMount } from 'svelte'
 
-	export let config = {
+	let ParticlesComponent
+
+	onMount(async () => {
+		const module = await import('svelte-particles')
+
+		ParticlesComponent = module.default
+	})
+	export let color = '#fff'
+
+	let config = {
 		fpsLimit: 30,
 		particles: {
 			color: {
-				value: ['#fff', '#55f'],
+				value: color,
 			},
 			shape: {
 				type: 'square',
@@ -22,7 +31,7 @@
 			shadow: {
 				enable: true,
 				blur: 10,
-				color: ['#00f', '#ff0'],
+				color: ['#000'],
 				offset: {
 					x: 1,
 					y: 1,
@@ -78,13 +87,22 @@
 		pauseOnOutsideViewport: true,
 	}
 	export let className = ''
+	const random = (length = 8) => {
+		return Math.random().toString(16).substr(2, length)
+	}
 </script>
 
-<div class={className + ' relative'}>
+<div class={className + ' group relative'}>
 	<div class="relative z-10">
 		<slot />
 	</div>
-	<div class="absolute bottom-[-7rem] w-screen">
-		<Particles options={config} />
+	<div
+		class="absolute top-0 opacity-0 transition-all duration-1000 group-hover:opacity-100"
+	>
+		<svelte:component
+			this={ParticlesComponent}
+			id={random(20)}
+			options={config}
+		/>
 	</div>
 </div>

@@ -10,7 +10,7 @@
 </script>
 
 {#if !item.visible}
-	<a {href} class="px-4 py-1">
+	<a {href} class="rounded-lg bg-blue-700 px-4 py-1">
 		{text}
 	</a>
 {/if}
